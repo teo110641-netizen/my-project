@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUGAR</title>
+    <link rel="stylesheet" href="btgk.css" />
+    <title>Contact & Admin Project</title>
+    <!-- EmailJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="background">
+
+<header>
+    <div class="logo">LUGAR</div>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#projects">PROJECT</a>
+        <a href="#" id="openContact">CONTACT</a>
+    </nav>
+</header>
+
+<section class="hero fade-in">
+    <h1>
+        A home is <br>
+        built with love <br>
+        and dreams
+    </h1>
+
+    <p>Real estate firm that makes your dreams come true</p>
+
+    <div class="buttons">
+        <button class="btn dark" id="btnProjects">Our projects</button>
+        <button class="btn light" id="btnContact">Contact us</button>
+    </div>
+
+    <div class="doodle doodle-top-right">✦</div>
+    <div class="doodle doodle-middle">✦</div>
+    <div class="doodle doodle-bottom">➶</div>
+</section>
+</div>
+
+<!-- PROJECTS (SLIDER) -->
+<section id="projects" class="projects-section fade-in">
+    <h2>Our Projects</h2>
+
+  <div class="slide eco-slide">
+    <h3>Eco Apartment</h3>
+
+    <div class="eco-images"></div>
+</div>
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+    </div>
+</section>
+
+<!-- CONTACT POPUP -->
+<div class="contact-popup" id="contactPopup">
+    <div class="popup-content fade-in">
+        <span id="closePopup">×</span>
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Your email" required>
+            <textarea id="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="status"></p>
+    </div>
+</div>
+
+<!-- SECTION 2 -->
+    <div class="container">
+    <div class="image-section">
+      <img id="project-image" src="Mask Group.png" alt="Project Image" />
+    </div>
+    <div class="info-section">
+      <h2 id="project-title">Award winning real estate company in Dubai</h2>
+      <p class="description" id="project-description">
+        Semper arcu mauris aliquam lacus. Massa erat vitae ultrices pharetra scelerisque. Ipsum, turpis facilisis tempor pulvinar in lobortis ornare magna.
+      </p>
+      <div class="stats">
+        <div>
+          <div>Previous Projects</div>
+          <div id="stat-projects">34+</div>
+        </div>
+        <div>
+          <div>Years Experience</div>
+          <div id="stat-years">20y</div>
+        </div>
+        <div>
+          <div>Ongoing Projects</div>
+          <div id="stat-ongoing">12</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ongoing">
+    <h3>Ongoing projects</h3>
+    <p>Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+    <div class="nav-buttons">
+      <button id="prev-btn" aria-label="Previous">&#8592;</button>
+      <button id="next-btn" aria-label="Next">&#8594;</button>
+    </div>
+  </div>
+
+<div class="projects-wrapper">
+
+  <div class="projects-title">
+    <h2>Ongoing Projects</h2>
+    <p>Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="left bg.png">
+      <div class="overlay">
+        <button class="add-btn">Add to Our Project</button>
+      </div>
+      <div class="info">
+        <h4>Vintage Villa</h4>
+        <p>📍 2715 Ash Dr. San Jose, Dubai</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="Card 2.png">
+      <div class="overlay">
+        <button class="add-btn">Add to Our Project</button>
+      </div>
+      <div class="info">
+        <h4>Tonga Villa</h4>
+        <p>📍 1901 Thornridge Cir. Shiloh</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="Card 3.png">
+      <div class="overlay">
+        <button class="add-btn">Add to Our Project</button>
+      </div>
+      <div class="info">
+        <h4>Penthouse</h4>
+        <p>📍 2464 Royal Ln. Mesa</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="left bg (1).png">
+      <div class="overlay">
+        <button class="add-btn">Add to Our Project</button>
+      </div>
+      <div class="info">
+        <h4>Smart City</h4>
+        <p>📍 2715 Ash Dr. San Jose</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="added-projects">
+    <h3>Added to Our Project:</h3>
+    <ul id="project-list"></ul>
+  </div>
+
+</div>
+
+<section class="review-section">
+
+    <div class="title">
+        <h2>Few smiles and comment</h2>
+        <p>Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+    </div>
+
+    <div class="review-container">
+
+        <button class="nav-btn left">&larr;</button>
+
+        <div class="review-card">
+
+            <div class="image-box">
+                <img id="review-img" src="Mask Group.png">
+            </div>
+
+            <div class="text-box">
+                <div class="quote">❝</div>
+                <h3 id="review-title">Dream house isn’t dream anymore</h3>
+                <p id="review-text">
+                    Semper arcu mauris aliquam lacus. Massa erat vitae ultrices pharetra scelerisque. Ipsum,
+                    turpis facilisis tempor pulvinar.
+                </p>
+
+                <div class="author">
+                    <strong id="review-author">Brooklyn Simmons</strong>
+                    <span id="review-job">Artist</span>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="nav-btn right">&rarr;</button>
+    </div>
+
+</section>
+
+ <div class="container">
+
+    <div class="image-box">
+        <img src="left bg (2).png" alt="house">
+    </div>
+
+    <div class="form-box">
+        <h1>Contact us</h1>
+        <p>Turpis facilisis tempor pulvinar in lobortis ornare magna.</p>
+
+       <form id="popupForm">
+    <input type="text" id="name" placeholder="Your name" required>
+    <input type="email" id="email" placeholder="Your email" required>
+    <textarea id="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+            <div class="row">
+                <input type="email" id="email" placeholder="Email address" required>
+                <input type="text" id="phone" placeholder="Phone number" required>
+            </div>
+
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <div class="actions">
+                <button type="submit" id="btnSend">Get a quote</button>
+                <span class="note">We don't sell your email and spam</span>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<header>
+<h1>Admin — Nhật ký liên hệ</h1>
+<div>
+<a href="index.html" class="btn muted" style="text-decoration:none;color:#fff;margin-right:8px;">Về trang chủ</a>
+<button id="clearAllBtn" class="btn danger">Xóa toàn bộ</button>
+</div>
+</header>
+
+
+<div class="controls">
+<input id="searchInput" type="text" placeholder="Tìm theo tên, email, nội dung..." />
+<select id="statusFilter">
+<option value="all">Tất cả trạng thái</option>
+<option value="Thành công">Thành công</option>
+<option value="Thất bại">Thất bại</option>
+<option value="Lưu (chưa gửi)">Lưu (chưa gửi)</option>
+</select>
+<button id="exportBtn" class="btn">Xuất CSV</button>
+</div>
+
+
+<table id="logTable">
+<thead>
+<tr>
+<th>#</th>
+<th>Thời gian</th>
+<th>Tên</th>
+<th>Email</th>
+<th>Nội dung</th>
+<th>Trạng thái</th>
+<th>Hành động</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<script src="baitapgk.js"></script>
+</body>
+</html>
